@@ -14,5 +14,6 @@ namespace LibraryManagementSystemUAZ.Services.Interfaces
         Task AddMemberAsync(Member member);
         Task UpdateMemberAsync(Member member);
         Task DeleteMemberAsync(int id);
+        Task<int> CountAsync();
     }
 }

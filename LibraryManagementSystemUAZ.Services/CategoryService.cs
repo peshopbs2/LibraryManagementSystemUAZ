@@ -39,6 +39,11 @@ namespace LibraryManagementSystemUAZ.Services
             return await _unitOfWork.Categories.GetAllAsync();
         }
 
+        public async Task<int> CountAsync()
+        {
+            return await _unitOfWork.Categories.CountAsync();
+        }
+
         public async Task<Category> GetCategoryByIdAsync(int id)
         {
             return await _unitOfWork.Categories.GetByIdAsync(id);

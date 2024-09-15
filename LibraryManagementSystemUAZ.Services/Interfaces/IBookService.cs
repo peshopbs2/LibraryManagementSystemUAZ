@@ -15,5 +15,6 @@ namespace LibraryManagementSystemUAZ.Services.Interfaces
         Task UpdateBookAsync(Book book);
         Task DeleteBookAsync(int id);
         Task<IEnumerable<Book>> GetBooksByAuthorAsync(int authorId);
+        Task<int> CountAsync();
     }
 }

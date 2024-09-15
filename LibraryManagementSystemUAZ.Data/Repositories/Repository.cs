@@ -34,6 +34,10 @@ namespace LibraryManagementSystemUAZ.Data.Repositories
             return await dbSet.ToListAsync();
         }
 
+        public async Task<int> CountAsync()
+        {
+            return await dbSet.CountAsync();
+        }
         public async Task<T> GetByIdAsync(int id)
         {
             return await dbSet.FindAsync(id);

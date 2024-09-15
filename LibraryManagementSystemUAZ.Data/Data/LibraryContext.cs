@@ -11,9 +11,9 @@ namespace LibraryManagementSystemUAZ.Data.Data
 {
     public class LibraryContext : DbContext
     {
-        //public LibraryContext(DbContextOptions options)
-        //    : base(options)
-        //{ }
+        public LibraryContext(DbContextOptions options)
+            : base(options)
+        { }
         public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<Category> Categories { get; set; }
@@ -39,6 +39,7 @@ namespace LibraryManagementSystemUAZ.Data.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
         {
             optionsBuilder.UseSqlServer(AppConfiguration.ConnectionString);
+            optionsBuilder.UseLazyLoadingProxies();
             base.OnConfiguring(optionsBuilder);
         }
     }

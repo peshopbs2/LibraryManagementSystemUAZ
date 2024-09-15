@@ -22,6 +22,11 @@ namespace LibraryManagementSystemUAZ.Services
             await _unitOfWork.CompleteAsync();
         }
 
+        public async Task<int> CountAsync()
+        {
+            return await _unitOfWork.Authors.CountAsync();
+        }
+
         public async Task DeleteAuthorAsync(int id)
         {
             var author = await _unitOfWork.Authors.GetByIdAsync(id);

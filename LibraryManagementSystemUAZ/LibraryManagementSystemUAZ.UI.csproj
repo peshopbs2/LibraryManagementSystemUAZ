@@ -13,10 +13,12 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="8.0.8" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\LibraryManagementSystemUAZ.Data\LibraryManagementSystemUAZ.Data.csproj" />
+    <ProjectReference Include="..\LibraryManagementSystemUAZ.Services\LibraryManagementSystemUAZ.Services.csproj" />
   </ItemGroup>
 
 </Project>

@@ -43,6 +43,10 @@ namespace LibraryManagementSystemUAZ.Services
             return await _unitOfWork.Members.GetByIdAsync(id);
         }
 
+        public async Task<int> CountAsync()
+        {
+            return await _unitOfWork.Members.CountAsync();
+        }
         public async Task UpdateMemberAsync(Member member)
         {
             _unitOfWork.Members.Update(member);

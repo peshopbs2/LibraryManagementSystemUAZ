@@ -12,6 +12,10 @@ namespace LibraryManagementSystemUAZ.Data.Entities
         public string Name { get; set; }
         public string Bio { get; set; }
 
-        public ICollection<BookAuthor> BookAuthors { get; set; }
+        public virtual ICollection<BookAuthor> BookAuthors { get; set; }
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

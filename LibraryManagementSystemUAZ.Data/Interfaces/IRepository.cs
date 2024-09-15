@@ -11,6 +11,7 @@ namespace LibraryManagementSystemUAZ.Data.Interfaces
     {
         Task<T> GetByIdAsync(int id);
         Task<IEnumerable<T>> GetAllAsync();
+        Task<int> CountAsync();
         Task AddAsync(T entity);
         void Delete(T entity);
         void Update(T entity);
